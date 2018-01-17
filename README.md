@@ -67,8 +67,8 @@ I had two aspects of the puzzle to model: the configurations, and the solutions.
 My model of the configurations come from the types of cubes used on the puzzle itself.
 There are two of them:
 
-1) Straights, `o`s -- either the ones with a single hole, or the ones with two holes with coinciding axes
-2) Corners, `-`s -- the ones with two holes with axes perpendicular to each other
+1) Straights &#8211; either the ones with a single hole, or the ones with two holes with coinciding axes, denoted with a `-`
+2) Corners &#8211; the ones with two holes with axes perpendicular to each other, denoted with a `o`
 
 The one we had had the following configuration:
 
