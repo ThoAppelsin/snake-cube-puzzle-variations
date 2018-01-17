@@ -96,3 +96,4 @@ As an example, the one we have the following configuration as its solution:
 ```
 
 This solution is to be applied to the primary variant.
+Just as I did, you can obtain this solution from the [solutions.txt](https://raw.githubusercontent.com/ThoAppelsin/snake-cube-puzzle-variations/master/SnakeCubePuzzle/solutions.txt), by searching for the configuration itself on the file.
