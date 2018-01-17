@@ -610,10 +610,15 @@ void generalsolver( void )
 
 	for ( size_t j = 0; j < solvableconfigurations.configurationcount; j++ )
 	{
-		fprintf( output, "\tStructure #%d: ", j + 1 );
-		for ( int i = 0; i < 27; i++ )
+		fprintf( output, "\tStructure #%d:\n\t\t", j + 1 );
+		for (int i = 0; i < 27; i++)
 		{
-			fprintf( output, "%c", (ISBITSET( solvableconfigurations.configurationsarray[j]->configurationbits, i )) ? 'o' : '-' );
+			fprintf(output, "%c", (ISBITSET(solvableconfigurations.configurationsarray[j]->configurationbits, i)) ? 'o' : '-');
+		}
+		fprintf(output, "\n\t\t");
+		for (int i = 26; i >= 0; i--)
+		{
+			fprintf(output, "%c", (ISBITSET(solvableconfigurations.configurationsarray[j]->configurationbits, i)) ? 'o' : '-');
 		}
 		fputc( '\n', output );
 		fputc( '\n', output );
