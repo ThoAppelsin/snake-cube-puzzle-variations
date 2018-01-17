@@ -54,6 +54,45 @@ Most notable symmetries that emerge are:
 
 1) A configuration may be modelled in reverse, and it would actually be the same puzzle, in reverse.
 2) A solution may be rotated in all three axes by 90, 180, and 270 degrees, and still be a solution.
-  - Those rotations may be combined, and still be solutions.
+3) Those rotations may be combined, and still be solutions.
 
 These I must have eliminated, or at least tried to.
+
+## Models
+
+I had two aspects of the puzzle to model: the configurations, and the solutions.
+
+### Configurations
+
+My model of the configurations come from the types of cubes used on the puzzle itself.
+There are two of them:
+
+1) Straights, `o`s -- either the ones with a single hole, or the ones with two holes with coinciding axes
+2) Corners, `-`s -- the ones with two holes with axes perpendicular to each other
+
+The one we had had the following configuration:
+
+```
+--ooo-oo-ooo-o-oooo-o-o-o--
+--o-o-o-oooo-o-ooo-oo-ooo--
+```
+
+Here, the first one is referred as the primary variant, and the secondary variant is the mirrored version of the primary.
+
+### Solutions
+
+Solutions are closely related to the configurations that they belong to.
+While a configuration has 27 bits of information, a solution has 26, according to our model.
+Starting from an assumed initial position that the first cube is located at, a solution dictates
+towards which direction the next cube should be, in order to get the puzzle to its solution.
+
+To apply a solution, solving individual first needs to assume and visualize 3 perpendicular directions to work upon.
+It should not matter whether it is a right-handed or left-handed coordinate system.
+
+As an example, the one we have the following configuration as its solution:
+
+```
++x +x +y -x +z +z +y -z -z +x +z -y -y -x -x +y -z +y +z +z -y -y +x +x +y +y 
+```
+
+This solution is to be applied to the primary variant.
